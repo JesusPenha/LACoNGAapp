@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LAConGA Lab Software</title>
+    <HTA:APPLICATION ID="oMyApp" 
+        APPLICATIONNAME="Application Executer" 
+        BORDER="no"
+        CAPTION="no"
+        SHOWINTASKBAR="yes"
+        SINGLEINSTANCE="yes"
+        SYSMENU="yes"
+        SCROLL="no"
+        WINDOWSTATE="normal">
+    <script type="text/javascript" language="javascript">
+        function RunPutty() {
+        WshShell = new ActiveXObject("WScript.Shell");
+        WshShell.Run("C:/Users/Jesus/Documents/putty.exe", 1, false);
+        }
+	function RunPET() {
+        WshShell = new ActiveXObject("WScript.Shell");
+        WshShell.Run('"C:/Program Files (x86)/CAEN/EasyPet/easypet.exe"', 1, false);
+        }
+    </script>
+</head>
+<body>
+    <h1>LA-CoNGA Software tools</h1>
+    <p>This is the software interface of LA-CoNGA Lab. Students can access software of EasyPET, Escaramujo, WCD and Dark Box.</p>
+    <input type="button" value="Terminal" onclick="RunPutty();"/>
+    <input type="button" value="EasyPET" onclick="RunPET();"/>
+</body>
+</html>
